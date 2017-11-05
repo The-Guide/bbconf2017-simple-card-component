@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <title>lion-card Demo</title>
+  <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+
+  <link rel="import" href="../../iron-demo-helpers/demo-pages-shared-styles.html">
+  <link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
+
+  <link rel="import" href="../simple-card.html">
+
+  <custom-style>
+    <style>
+      html {
+        --demo-snippet: {
+          margin-bottom: 24px;
+        };
+        --demo-snippet-demo: {
+          background-color: #f5f5f5;
+          color: var(--primary-text-color, #333333);
+        };
+        --demo-snippet-code: {
+          background-color: #fff;
+          color: var(--primary-text-color, #333333);
+        };
+      }
+    </style>
+  </custom-style>
+</head>
+<body unresolved style="width: 90%; max-width: 980px; margin:0 auto;">
+
+  <h1 class="sr-only">Example page of the lion-card</h1>
+
+  <h2 class="font-b-xl">An basic example</h2>
+  <demo-snippet>
+    <template>
+      <simple-card>
+        <h3 slot="header">Title</h3>
+        <div>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis varius quam quam. Praesent gravida urna id
+          nunc luctus, nec varius tortor tristique. Mauris non sem vel magna consectetur sodales. Aenean ut urna
+          sodales, auctor elit condimentum, cursus neque. Sed quam mauris, ultricies ac congue ut, volutpat
+          volutpat dui. Quisque sagittis diam et justo fringilla condimentum. Cras ut dignissim dolor, nec
+          efficitur mi. Praesent vitae consectetur odio. Donec lectus nulla, tristique eget lacinia consequat,
+          porttitor in arcu. Fusce mattis nec leo nec vulputate. In hac habitasse platea dictumst.
+        </div>
+      </simple-card>
+    </template>
+  </demo-snippet>
+
+  <h2 class="font-b-xl">An example without header</h2>
+  <demo-snippet>
+    <template>
+      <simple-card>
+        <div>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis varius quam quam. Praesent gravida urna id
+          nunc luctus, nec varius tortor tristique. Mauris non sem vel magna consectetur sodales. Aenean ut urna
+          sodales, auctor elit condimentum, cursus neque. Sed quam mauris, ultricies ac congue ut, volutpat
+          volutpat dui. Quisque sagittis diam et justo fringilla condimentum. Cras ut dignissim dolor, nec
+          efficitur mi. Praesent vitae consectetur odio. Donec lectus nulla, tristique eget lacinia consequat,
+          porttitor in arcu. Fusce mattis nec leo nec vulputate. In hac habitasse platea dictumst.
+        </div>
+      </simple-card>
+    </template>
+  </demo-snippet>
+
+  <h2 class="font-b-xl">An example of an article card</h2>
+  <p>
+    This is an example of the article card which has an image on top, a title and body text.
+  </p>
+  <demo-snippet>
+    <template>
+      <simple-card>
+        <img src="assets/images/dummy-image-2.jpg" slot="header" />
+        <h3 slot="header">Image Example</h3>
+        <div>
+          If you add an image to the header it gets
+          <pre style="font-size: 10px;">
+            padding: 0;
+            object-fit: cover;
+            width: 100%;
+            height: 200px;
+            border-radius: var(--border-radius, 4px) var(--border-radius, 4px) 0 0;
+            border-bottom: none;</pre>
+          by default. So to make it work in IE, Edge you need a polyfill for object-fit.
+        </div>
+      </simple-card>
+    </template>
+  </demo-snippet>
+
+  <h2 class="font-b-xl">An example of a custom <code>&lt;simple-card&gt;</code>:</h2>
+  <demo-snippet>
+    <template>
+      <custom-style>
+        <style>
+          #custom-card .header {
+            border-top-left-radius: 3px;
+            border-top-right-radius: 3px;
+            border-bottom: 2px dashed orange;
+            display: flex;
+            justify-content: space-between;
+          }
+          #custom-card h3 {
+            margin: 0;
+          }
+        </style>
+      </custom-style>
+      <simple-card id="custom-card">
+        <div slot="header" class="header">
+          <h3>Title</h3>
+          <span>Element</span>
+        </div>
+        <div>
+          Card content
+        </div>
+      </simple-card>
+    </template>
+  </demo-snippet>
+
+</body>
+</html>
