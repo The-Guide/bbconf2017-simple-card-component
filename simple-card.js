@@ -22,5 +22,13 @@ class SimpleCard extends Bbconf2017LitElement(HTMLElement) {
     console.log('simple-card element added to the DOM!')
   }
 }
+render() {
+  return html`
+      ${this.styleTemplate}
+      ${this.headerTemplate}
+      ${this.bodyTemplate}
+      ${this.footerTemplate}
+    `;
+}
 
 customElements.define('simple-card', SimpleCard);
