@@ -1,9 +1,0 @@
-{
-  "strict-ssl": false,
-  "shorthand-resolver": "art://{{owner}}/{{package}}",
-  "resolvers": [
-    "bower-art-resolver"
-  ],
-  "no-proxy": "ing.net",
-  "timeout": 300000
-}
