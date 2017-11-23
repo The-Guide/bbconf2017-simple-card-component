@@ -20,7 +20,6 @@ class SimpleCard extends Bbconf2017LitElement(HTMLElement) {
         #header ::slotted(*),
         #body ::slotted(*),
         #footer ::slotted(*){
-          border-radius: 4px;
           padding: 24px;
         }
         
